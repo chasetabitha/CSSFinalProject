@@ -1,10 +1,11 @@
-*{
+/**{
   background-color: #BCA0BC;
 }
-
+*/
 .maincontainer{
   float: left;
   width: 70%;
+  /*display: flex;*/
 }
 .sidecontainer{
   float: left;
@@ -19,20 +20,48 @@
   width: 200px;
 }
 .maincontent{
-  display: inline-block;
-  height: 300px;
-  width: 300px;
+  /*display: inline-block;*/
+  float: left;
+  width: calc((100% - 30px) / 3 );
+  height: 350px;
   border: 1px solid black;
   margin: 2px;
   background-color: #F9B9F2;
-  overflow: auto;
+  text-align: justify;
+  overflow-x: hidden;
+  flex: 1 1 50px;
 }
 .sidecontent{
-  height: 200px;
+  height: auto;
   width: 100%;
   border: 1px solid black;
   margin: 2px;
   background-color: #F9B9F2;
+  overflow-x: hidden;
+  text-align: justify;
+}
+.contactcontainer{
+  margin: auto;
+  width: 70%;
+  background-color: #F9B9F2;
+}
+.contacttext{
+  width: 100%;
+  border: 1px solid black;
+}
+.comment{
+  height: 300px;
+  text-align: justify;
+}
+.radio{
+  width: calc((100% - 7px) / 3) ;
+  float: left;
+  border: 1px solid black;
+  background-color: #F9B9F2;
+}
+button{
+  margin: auto;
+  width: 100%;
 }
 .link{
   width: 100%;
@@ -56,8 +85,8 @@ nav a:hover{
   background-color: #4C5F6B;
   color: white;
 }
-nav a:active{
-  background-color: #4C5F6B;
+.active{
+  background-color: #2B3D41;
   color: white;
 }
 img{
@@ -71,15 +100,58 @@ footer{
   width: 100%;
   clear: both;
   text-align: center;
+  background-color: #83A0A0;
+  border: 2px solid white;
 }
-.arial{
-  font: arial;
+.menufont{
+  font-family: "American Typewriter", cursive, serif;
 }
-.georgia{
-  font-family: georgia, serif;
+.contentfont{
+  font-family: "Times New Roman", Times, sans-serif;
 }
-@media(max-width: 300px){
+.footerfont{
+  font-family: "Pacifico", cursive;
+}
+@media (max-width: 1200px){
       .sidecontainer{
         width: 100%;
+      }
+      .sidecontent{
+        width: 100%;
+        height: auto;
+      }
+      .maincontainer{
+        width: 100%;
+      }
+}
+@media (max-width: 800px){
+      .sidecontainer{
+        width: 100%;
+      }
+      .sidecontent{
+        width: 100%;
+        height: auto;
+      }
+      .maincontainer{
+        width: 100%;
+      }
+      .maincontent{
+        width: calc( (100% - 15px) / 2);
+      }
+}
+@media (max-width: 600px){
+      .sidecontainer{
+        width: 100%;
+      }
+      .sidecontent{
+        width: 100%;
+        height: auto;
+      }
+      .maincontainer{
+        width: 100%;
+      }
+      .maincontent{
+        width: 100%;
+        height: auto;
       }
 }
